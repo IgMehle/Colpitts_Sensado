@@ -2,26 +2,23 @@
 ***                       Micro-Cap 12.2.0.2 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***                  Transient Analysis of Colpitts_sensado                  ***
-***                            26/3/2026 23:58:07                            ***
+***                     AC Analysis of Colpitts_sensado                      ***
+***                            26/3/2026 23:48:42                            ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           2m
-Output Start Time (tstart) 0
-Maximum Time Step          100n
-Number of Points           1000
-Temperature                Linear 27
-Retrace Runs               1
-Run Options                Normal
-State Variables            Zero
-Operating Point            On
-Operating Point Only       Off
-Auto Scale Ranges          On
-Accumulate Plots           Off
-Fixed Time Step            Off
-Periodic Steady State      Off
-Ignore Expression Errors   Off
+Frequency Range          Log 1E8,1Meg
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
 
 
 *****************************************************
@@ -34,12 +31,13 @@ DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
 TK           12.000   B             4.754   E             4.078  
-4            12.000   5             0.000  
+4            12.000   5             0.000   6             0.000  
+7             0.000  
 
 DC Operating Point Inductor Current
 ===================================
-Inductor     Current 
-L1            3.699m 
+Inductor     Current  Inductor     Current 
+L1            3.699m  L2            0.000  
 
 
 Operating Point for Devices of Type Bipolar Junction Transistors NPN
@@ -99,45 +97,45 @@ vce                  0.000
 
 Operating Point for Devices of Type Resistor
 ============================================
-Instance:                RB2            RB1           RTK1             RE
-V                    -4.754         -7.246          0.000         -4.078 
+Instance:                RLS            RS2            RB2            RB1
+V                     0.000          0.000         -4.754         -7.246 
 Power DC Terms:
-PD                    2.260m         3.500m         0.000         15.115m
+PD                    0.000          0.000          2.260m         3.500m
 
 DC Pin Currents:
-Ir                 -475.415u      -483.056u         0.000         -3.707m
+Ir                    0.000          0.000       -475.415u      -483.056u
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
 tc2                   0.000          0.000          0.000          0.000 
 
 
-Instance:                 RL
-V                     0.000 
+Instance:               RTK1             RE             RL
+V                     0.000         -4.078          0.000 
 Power DC Terms:
-PD                    0.000 
+PD                    0.000         15.115m         0.000 
 
 DC Pin Currents:
-Ir                    0.000 
+Ir                    0.000         -3.707m         0.000 
 
 Device Variables:
-tc1                   0.000 
-tc2                   0.000 
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
 
 
 
 Operating Point for Devices of Type Inductor
 ============================================
-Instance:                 L1
-V                     0.000 
+Instance:                 L1             L2
+V                     0.000          0.000 
 Power DC Terms:
-PS                    0.000 
+PS                    0.000          0.000 
 
 DC Pin Currents:
-Il                    3.699m
+Il                    3.699m         0.000 
 
 Device Variables:
-ic                    0.000 
+ic                    0.000          0.000 
 
 
 
